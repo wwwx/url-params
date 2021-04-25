@@ -16,12 +16,16 @@ describe("Get url params: " + test_url, function() {
   })
 })
 
-
-
-
-var test_url_no_query = "http://www.google.com/helloworld"
-describe("Get url params: " + test_url_no_query, function() {
+var test_url_2 = "http://www.google.com/helloworld"
+describe("Get url params: " + test_url_2, function() {
   it("should return an empty object: {}", function() {
-    expect(getUrlParams(test_url_no_query)).to.be.an("object").that.is.empty
+    expect(getUrlParams(test_url_2)).to.be.an("object").that.is.empty
+  })
+})
+
+var test_url_3 = "http://www.google.com/helloworld?name"
+describe("Get url params: " + test_url_3, function() {
+  it("name = true", function() {
+    expect(getUrlParams(test_url_3).name).to.be.true
   })
 })
