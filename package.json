@@ -6,6 +6,8 @@
   "scripts": {
     "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "commit": "git-cz",
+    "prebuild": "rimraf dist",
+    "build": "rollup src/index.js --dir dist --format umd",
     "test": "istanbul cover -x *.spec.js _mocha -- -R spec src/index.spec.js"
   },
   "repository": {
@@ -25,7 +27,9 @@
     "cz-conventional-changelog": "^3.3.0",
     "ghooks": "^2.0.4",
     "istanbul": "^0.4.5",
-    "mocha": "^8.3.2"
+    "mocha": "^8.3.2",
+    "rimraf": "3.0.2",
+    "rollup": "2.45.2"
   },
   "config": {
     "commitizen": {
