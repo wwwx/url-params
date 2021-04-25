@@ -1,0 +1,24 @@
+{
+  "name": "url-params",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wwwx/url-params.git"
+  },
+  "keywords": [],
+  "author": "Xu Wang <834166254@qq.com> (https://github.com/wwwx)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wwwx/url-params/issues"
+  },
+  "homepage": "https://github.com/wwwx/url-params#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2"
+  }
+}
