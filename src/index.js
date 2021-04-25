@@ -2,7 +2,8 @@ function getUrlParams(url) {
     if (typeof url !== 'string') {
         throw new Error('Parameter `url` must be a string.');
     }
-
+    
+    var query = null;
     if (url.indexOf('?') > 0) {
         query = url.substr(url.indexOf('?') + 1)
     }

@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "commit": "git-cz"	  
+    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "commit": "git-cz",
+    "test": "istanbul cover -x *.spec.js _mocha -- -R spec src/index.spec.js"
   },
   "repository": {
     "type": "git",
@@ -21,11 +23,16 @@
     "chai": "^4.3.4",
     "commitizen": "^4.2.3",
     "cz-conventional-changelog": "^3.3.0",
+    "ghooks": "^2.0.4",
+    "istanbul": "^0.4.5",
     "mocha": "^8.3.2"
   },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "npm run test"
     }
   }
 }
