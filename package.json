@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/wwwx/url-params.git"
   },
-  "keywords": [],
+  "keywords": ["url", "params", "urlparams"],
   "author": "Xu Wang <834166254@qq.com> (https://github.com/wwwx)",
   "license": "MIT",
   "bugs": {
