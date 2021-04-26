@@ -1,7 +1,8 @@
-(function (factory) {
+(function (global, factory) {
+    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :
-    factory();
-}((function () { 'use strict';
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.urlparams = factory());
+}(this, (function () { 'use strict';
 
     function getUrlParams(url) {
         if (typeof url !== 'string') {
@@ -28,6 +29,8 @@
         return params;
     }
 
-    module.exports = getUrlParams;
+    var src = getUrlParams;
+
+    return src;
 
 })));

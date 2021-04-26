@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../dist/bundle.js"></script>
+    <script>
+        (function() {
+            function print(content) {
+                var el = document.createElement('div')
+                el.innerHTML = content;
+                document.body.appendChild(el)
+            }
+
+            // var url = 'http://www.google.com'
+            if (!location.search) {
+                location.href = location.href + '?hello=world&name'
+            }
+            var content = JSON.stringify((urlparams(location.href)), null, 4)
+            print(content) // { hello: 'world', name: true }
+        })()
+    </script>
+</body>
+</html>

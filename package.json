@@ -2,12 +2,14 @@
   "name": "publish-url-params",
   "version": "1.0.2",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "commit": "git-cz",
     "prebuild": "rimraf dist",
-    "build": "rollup src/index.js --file dist/bundle.js --format umd --name 'urlparams'",
+    "build": "npm run build:min && npm run build:unmin",
+    "build:min": "NODE_ENV=production rollup --config --file dist/bundle.min.js",
+    "build:unmin": "rollup --config",
     "test": "istanbul cover -x *.spec.js _mocha -- -R spec src/index.spec.js"
   },
   "repository": {
@@ -22,6 +24,7 @@
   },
   "homepage": "https://github.com/wwwx/url-params#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^18.0.0",
     "chai": "^4.3.4",
     "commitizen": "^4.2.3",
     "cz-conventional-changelog": "^3.3.0",
