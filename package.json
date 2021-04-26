@@ -1,6 +1,6 @@
 {
   "name": "publish-url-params",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
@@ -16,7 +16,11 @@
     "type": "git",
     "url": "git+https://github.com/wwwx/url-params.git"
   },
-  "keywords": ["url", "params", "urlparams"],
+  "keywords": [
+    "url",
+    "params",
+    "urlparams"
+  ],
   "author": "Xu Wang <834166254@qq.com> (https://github.com/wwwx)",
   "license": "MIT",
   "bugs": {
