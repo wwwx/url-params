@@ -13,11 +13,10 @@ require(['urlparams'], function(urlparams) {
         document.body.appendChild(el)
     }
 
-    // var url = 'http://www.google.com'
     if (!location.search) {
-        location.href = location.href + '?hello=world&name'
+        location.href = location.href + '?foo=123&bar'
     }
     var content = JSON.stringify((urlparams(location.href)), null, 4)
-    print(content) // { hello: 'world', name: true }
+    print(content) // { foo: '123', bar: true }
 
 })
