@@ -1,4 +1,4 @@
-function getUrlParams(url) {
+function getParams(url) {
     if (typeof url !== 'string') {
         throw new Error('Parameter `url` must be a string.');
     }
@@ -23,5 +23,5 @@ function getUrlParams(url) {
     return params;
 }
 
-module.exports = getUrlParams;
+module.exports = getParams;
 
